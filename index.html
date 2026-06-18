@@ -1,22 +1,289 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa Andrômeda</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa Andrômeda</title>
+  <meta name="description" content="Andrômeda é o aplicativo que te ajuda a entender o que sente, respirar com mais calma e ter a quem recorrer em uma crise de ansiedade, sem julgamentos.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <header>
 
-    </header>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">
+        <span class="logo__mark" aria-hidden="true">
+          <span class="logo__dot"></span>
+          <span class="logo__ring"></span>
+        </span>
+        Andrômeda
+      </a>
 
-    <h1></h1>
-    
-    
-    <footer>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
 
-    </footer>
+      <nav class="nav" id="navMenu">
+        <a href="#home" class="nav__link">Início</a>
+        <a href="#sobre" class="nav__link">Sobre Nós</a>
+        <a href="#solucoes" class="nav__link">Soluções</a>
+        <a href="#equipe" class="nav__link">Equipe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">VOCÊ NÃO ESTÁ SOZINHO(A)</p>
+          <h1 class="hero__title">
+            Sua ansiedade não te define.<br>
+            Agora você tem <span class="highlight">para onde recorrer.</span>
+          </h1>
+          <p class="hero__subtitle">
+            Andrômeda é o espaço seguro que cabe no seu bolso — para você respirar, entender o que sente
+            e nunca enfrentar uma crise de ansiedade sozinho(a), sem precisar explicar nada a ninguém.
+          </p>
+          <div class="hero__actions">
+            <a href="#solucoes" class="btn btn--primary">Conhecer as soluções</a>
+            <a href="#sobre" class="btn btn--ghost">Entender o porquê</a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="breathe">
+            <div class="breathe__ring breathe__ring--3"></div>
+            <div class="breathe__ring breathe__ring--2"></div>
+            <div class="breathe__ring breathe__ring--1"></div>
+            <div class="breathe__core"></div>
+          </div>
+          <span class="star star--1"></span>
+          <span class="star star--2"></span>
+          <span class="star star--3"></span>
+          <span class="star star--4"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre">
+      <div class="container sobre__inner">
+        <div class="sobre__text">
+          <p class="eyebrow">SOBRE A ANDRÔMEDA</p>
+          <h2 class="section-title">Entendemos o que ninguém te explicou</h2>
+
+          <p class="sobre__paragraph">
+            Sabemos como é. No meio de uma crise de ansiedade, o coração acelera, os pensamentos se
+            embaralham e, na maioria das vezes, não existe alguém por perto que saiba o que dizer —
+            ou, pior, alguém que diga "isso não é nada", "para de exagerar" ou "respira que já passa".
+            Pedir ajuda parece impossível quando você nem sabe nomear o que está sentindo, e o ambiente
+            ao seu redor, em vez de acolher, acaba invalidando o que você sente.
+          </p>
+          <p class="sobre__paragraph">
+            A Andrômeda nasceu para preencher essa lacuna. Nossa missão é oferecer uma ferramenta prática,
+            disponível no momento exato em que você mais precisa, para que você possa recuperar o controle,
+            entender melhor as suas próprias emoções e ter a quem recorrer — sem julgamentos, sem cobranças
+            e sem precisar estar bem o tempo todo.
+          </p>
+        </div>
+
+        <div class="sobre__cards">
+          <div class="mini-card">
+            <span class="mini-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 40c8-6 16-13 16-22a9 9 0 0 0-16-5 9 9 0 0 0-16 5c0 9 8 16 16 22Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <p>Acolhimento sem julgamento, a qualquer hora.</p>
+          </div>
+          <div class="mini-card">
+            <span class="mini-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="2"/>
+                <path d="M24 16v8l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <p>Apoio prático no exato momento da crise.</p>
+          </div>
+          <div class="mini-card">
+            <span class="mini-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 8 L29 19 L41 21 L32.5 29 L34.5 41 L24 35 L13.5 41 L15.5 29 L7 21 L19 19 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <p>Recuperar o controle das próprias emoções.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUÇÕES -->
+    <section class="solucoes" id="solucoes">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">NOSSAS SOLUÇÕES</p>
+          <h2 class="section-title">Ferramentas para cada momento</h2>
+          <p class="section-subtitle">Pensadas para te acompanhar antes, durante e depois de uma crise de ansiedade.</p>
+        </div>
+
+        <div class="grid grid--solucoes">
+
+          <article class="card">
+            <span class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="6" width="32" height="36" rx="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 24h7l3-7 6 14 3-7h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3 class="card__title">Botão de Emergência</h3>
+            <p class="card__text">Quando você não sabe a quem recorrer, um toque é suficiente. Conecte-se rapidamente com alguém de confiança, sem precisar explicar nada antes.</p>
+          </article>
+
+          <article class="card">
+            <span class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 8h20a6 6 0 0 1 6 6v24H16a6 6 0 0 1-6-6V8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M16 18h12M16 25h12M16 32h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <h3 class="card__title">Diário de Emoções</h3>
+            <p class="card__text">Anote o que sente, identifique padrões e comece a entender sua própria mente. Cada registro é um passo para se conhecer melhor.</p>
+          </article>
+
+          <article class="card">
+            <span class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+                <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+              </svg>
+            </span>
+            <h3 class="card__title">Respiração Guiada</h3>
+            <p class="card__text">Técnicas práticas e visuais para acalmar o corpo no exato momento da crise e recuperar o controle da respiração — e dos pensamentos.</p>
+          </article>
+
+          <article class="card">
+            <span class="card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="24" r="2.5" fill="currentColor"/>
+              </svg>
+            </span>
+            <h3 class="card__title">Jogos de Foco</h3>
+            <p class="card__text">Pequenos exercícios interativos pensados para redirecionar a atenção e trazer alívio imediato quando a ansiedade aperta.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section class="equipe" id="equipe">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">QUEM FAZ A ANDRÔMEDA</p>
+          <h2 class="section-title">Nossa equipe</h2>
+          <p class="section-subtitle">Estudantes da Etec Prof. Horácio Augusto da Silveira dedicados a esse projeto.</p>
+        </div>
+
+        <div class="grid grid--equipe">
+
+          <article class="member">
+            <div class="member__avatar" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="18" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 40c0-8.8 7.2-14 16-14s16 5.2 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="member__name">Bruno de Abreu Santos</h3>
+            <span class="member__role">[Inserir Função]</span>
+          </article>
+
+          <article class="member">
+            <div class="member__avatar" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="18" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 40c0-8.8 7.2-14 16-14s16 5.2 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="member__name">Kamila Aparecida da Silva Morais</h3>
+            <span class="member__role">[Inserir Função]</span>
+          </article>
+
+          <article class="member">
+            <div class="member__avatar" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="18" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 40c0-8.8 7.2-14 16-14s16 5.2 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="member__name">Kevin Santos Leão</h3>
+            <span class="member__role">[Inserir Função]</span>
+          </article>
+
+          <article class="member">
+            <div class="member__avatar" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="18" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 40c0-8.8 7.2-14 16-14s16 5.2 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="member__name">Larissa Amaral Rodrigues</h3>
+            <span class="member__role">[Inserir Função]</span>
+          </article>
+
+          <article class="member">
+            <div class="member__avatar" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="18" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 40c0-8.8 7.2-14 16-14s16 5.2 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="member__name">Matheus Rocha Alves</h3>
+            <span class="member__role">[Inserir Função]</span>
+          </article>
+
+          <article class="member">
+            <div class="member__avatar" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="18" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 40c0-8.8 7.2-14 16-14s16 5.2 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="member__name">Samuel Lopes Lima</h3>
+            <span class="member__role">[Inserir Função]</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="logo logo--footer">
+        <span class="logo__mark" aria-hidden="true">
+          <span class="logo__dot"></span>
+          <span class="logo__ring"></span>
+        </span>
+        Andrômeda
+      </span>
+      <p>© 2026 — Andrômeda. Etec Prof. Horácio Augusto da Silveira.</p>
+    </div>
+  </footer>
+
+  <script src="SCRIPT/script.js"></script>
 </body>
 </html>
