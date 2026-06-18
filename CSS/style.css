@@ -219,12 +219,13 @@ button {
 .nav {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 26px;
 }
 
 .nav__link {
   font-weight: 600;
-  font-size: 0.96rem;
+  font-size: 0.92rem;
+  white-space: nowrap;
   color: var(--color-text);
   position: relative;
   padding: 6px 2px;
@@ -458,10 +459,80 @@ button {
 }
 
 /* ============================================
+   Valores
+   ============================================ */
+.valores {
+  padding: 100px 0;
+}
+
+.valores__intro {
+  max-width: 720px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.valores__intro .section-subtitle,
+.valores__text {
+  margin: 18px auto 0;
+  max-width: 640px;
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+}
+
+.grid--pilares {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pillar {
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+  padding: 34px 26px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.pillar:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card);
+}
+
+.pillar__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(96, 70, 138, 0.10);
+  color: var(--color-primary);
+  margin-bottom: 18px;
+}
+
+.pillar__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.pillar__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.12rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 10px;
+}
+
+.pillar__text {
+  font-size: 0.94rem;
+  color: var(--color-text-muted);
+}
+
+/* ============================================
    Soluções — Cards Grid
    ============================================ */
 .solucoes {
   padding: 100px 0;
+  background: var(--color-bg-soft);
 }
 
 .grid {
@@ -478,12 +549,6 @@ button {
   border-radius: var(--radius-lg);
   padding: 36px 28px;
   box-shadow: var(--shadow-card);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 44px rgba(96, 70, 138, 0.16);
 }
 
 .card__icon {
@@ -517,6 +582,49 @@ button {
 }
 
 /* ============================================
+   Interatividade unificada dos cards
+   (Soluções, Equipe e Ferramentas)
+   ============================================ */
+.card,
+.member,
+.tool-card {
+  transition: all 0.3s ease;
+}
+
+.card:hover,
+.member:hover,
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 46px rgba(96, 70, 138, 0.18);
+  cursor: pointer;
+}
+
+/* ============================================
+   Ferramentas Utilizadas
+   ============================================ */
+.ferramentas {
+  padding: 100px 0;
+}
+
+.grid--ferramentas {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--ferramentas .card {
+  padding: 30px 24px;
+}
+
+.grid--ferramentas .card__icon {
+  width: 52px;
+  height: 52px;
+}
+
+.grid--ferramentas .card__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* ============================================
    Equipe
    ============================================ */
 .equipe {
@@ -534,12 +642,6 @@ button {
   padding: 34px 24px;
   text-align: center;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.member:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
 }
 
 .member__avatar {
@@ -577,6 +679,128 @@ button {
   font-weight: 600;
   font-style: italic;
   color: var(--color-secondary);
+}
+
+/* ============================================
+   Contato e Feedback
+   ============================================ */
+.contato {
+  padding: 100px 0;
+}
+
+.contato__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-item__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(96, 70, 138, 0.10);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-item__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contact-item__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-item__label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.contact-item__value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.contato__repo {
+  background: var(--color-primary-dark);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  color: #fff;
+}
+
+.contato__repo .eyebrow {
+  color: #C9BEE6;
+}
+
+.contato__repo-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-top: 4px;
+}
+
+.contato__repo-text {
+  margin-top: 16px;
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.btn--github {
+  margin-top: 26px;
+  gap: 10px;
+  background: #fff;
+  color: var(--color-primary-dark);
+  width: 100%;
+}
+
+.btn--github:hover {
+  background: var(--color-bg);
+  transform: translateY(-2px);
+}
+
+.btn__icon {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+}
+
+.contato__repo-note {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
 }
 
 /* ============================================
@@ -651,9 +875,23 @@ button {
   .grid--equipe {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .grid--ferramentas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--pilares {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .contato__inner {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1040px) {
   .nav {
     position: fixed;
     top: var(--header-height);
@@ -704,6 +942,10 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .grid--ferramentas {
+    grid-template-columns: 1fr;
+  }
+
   .hero {
     padding-top: calc(var(--header-height) + 40px);
   }
@@ -736,5 +978,13 @@ button {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .card:hover,
+  .member:hover,
+  .tool-card:hover,
+  .pillar:hover,
+  .btn:hover {
+    transform: none;
   }
 }

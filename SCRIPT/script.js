@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
      Animações de entrada ao rolar (reveal)
      ============================================ */
   const revealTargets = document.querySelectorAll(
-    '.card, .member, .mini-card, .sobre__text, .section-head'
+    '.card, .member, .mini-card, .pillar, .contact-item, .contato__repo, .sobre__text, .section-head, .valores__intro'
   );
 
   revealTargets.forEach((el) => el.classList.add('reveal'));
