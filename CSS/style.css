@@ -188,32 +188,13 @@ button {
   color: var(--color-primary-dark);
 }
 
-.logo__mark {
-  position: relative;
-  width: 22px;
-  height: 22px;
+.logo__img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
   flex-shrink: 0;
-}
-
-.logo__dot {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-secondary);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.logo__ring {
-  position: absolute;
-  inset: 0;
-  border: 2px solid var(--color-primary);
-  border-radius: 50%;
-  opacity: 0.45;
+  border: 2px solid var(--color-secondary);
 }
 
 .nav {
@@ -433,6 +414,13 @@ button {
   border-radius: var(--radius-md);
   padding: 20px 22px;
   box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.mini-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
 }
 
 .mini-card__icon {
@@ -493,8 +481,9 @@ button {
 }
 
 .pillar:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.03);
   box-shadow: var(--shadow-card);
+  cursor: pointer;
 }
 
 .pillar__icon {
@@ -594,7 +583,7 @@ button {
 .card:hover,
 .member:hover,
 .tool-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.03);
   box-shadow: 0 22px 46px rgba(96, 70, 138, 0.18);
   cursor: pointer;
 }
@@ -653,12 +642,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   margin: 0 auto 20px;
 }
 
-.member__avatar svg {
-  width: 44px;
-  height: 44px;
+.member__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .member__name {
@@ -823,7 +814,7 @@ button {
   color: #fff;
 }
 
-.logo--footer .logo__ring {
+.logo--footer .logo__img {
   border-color: #fff;
 }
 
@@ -984,6 +975,7 @@ button {
   .member:hover,
   .tool-card:hover,
   .pillar:hover,
+  .mini-card:hover,
   .btn:hover {
     transform: none;
   }
