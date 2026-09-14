@@ -614,6 +614,45 @@ button {
 }
 
 /* ============================================
+   Seção MVV — Estilização Customizada
+   ============================================ */
+.MVV {
+  padding: 100px 0;
+  background: var(--color-bg); /* Mantém o contraste alternado com as outras seções */
+}
+
+/* Modificadores exclusivos para os pilares de Missão, Visão e Valores */
+.grid--pilares .pillar:nth-child(1) .pillar__icon {
+  background: rgba(96, 70, 138, 0.12);
+  color: var(--color-primary);
+}
+
+.grid--pilares .pillar:nth-child(2) .pillar__icon {
+  background: rgba(106, 109, 187, 0.12);
+  color: var(--color-secondary);
+}
+
+.grid--pilares .pillar:nth-child(3) .pillar__icon {
+  background: rgba(77, 56, 112, 0.12);
+  color: var(--color-primary-dark);
+}
+
+/* Ajustes finos de espaçamento interno para as quebras de linha (<br>) */
+.grid--pilares .pillar__text br {
+  margin-bottom: 6px;
+  display: block;
+  content: "";
+}
+
+/* Responsividade da Seção MVV para telas menores */
+@media (max-width: 768px) {
+  .MVV {
+    padding: 70px 0;
+  }
+}
+
+
+/* ============================================
    Equipe
    ============================================ */
 .equipe {
