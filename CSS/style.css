@@ -447,21 +447,21 @@ button {
 }
 
 /* ============================================
-   Valores
+   Prioridades
    ============================================ */
-.valores {
+.prioridades {
   padding: 100px 0;
 }
 
-.valores__intro {
+.prioridades__intro {
   max-width: 720px;
   margin: 0 auto 56px;
   text-align: center;
 }
 
-.valores__intro .section-subtitle,
-.valores__text {
-  margin: 18px auto 0;
+.prioridades__intro .section-subtitle,
+.prioridades__text {
+  magin: 18px auto 0;
   max-width: 640px;
   font-size: 1.05rem;
   color: var(--color-text-muted);
@@ -521,7 +521,6 @@ button {
    ============================================ */
 .solucoes {
   padding: 100px 0;
-  background: var(--color-bg-soft);
 }
 
 .grid {
@@ -593,6 +592,7 @@ button {
    ============================================ */
 .ferramentas {
   padding: 100px 0;
+  background: var(--color-bg-soft);
 }
 
 .grid--ferramentas {
@@ -618,11 +618,11 @@ button {
    ============================================ */
 .MVV {
   padding: 100px 0;
-  background: var(--color-bg); /* Mantém o contraste alternado com as outras seções */
+  background: var(--color-bg-soft);
 }
 
 /* Modificadores exclusivos para os pilares de Missão, Visão e Valores */
-.grid--pilares .pillar:nth-child(1) .pillar__icon {
+.grid--pilares .pillar:nth-child(1) .pillar__icon{
   background: rgba(96, 70, 138, 0.12);
   color: var(--color-primary);
 }
@@ -635,6 +635,11 @@ button {
 .grid--pilares .pillar:nth-child(3) .pillar__icon {
   background: rgba(77, 56, 112, 0.12);
   color: var(--color-primary-dark);
+}
+
+/*cores dos ícones de MVV padronizado*/
+.grid--pilares .pillar__icon svg{
+  color: var(--color-primary);
 }
 
 /* Ajustes finos de espaçamento interno para as quebras de linha (<br>) */
@@ -657,7 +662,6 @@ button {
    ============================================ */
 .equipe {
   padding: 100px 0;
-  background: var(--color-bg-soft);
 }
 
 .grid--equipe {
@@ -716,6 +720,7 @@ button {
    ============================================ */
 .contato {
   padding: 100px 0;
+  background: var(--color-bg-soft);
 }
 
 .contato__inner {
