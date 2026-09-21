@@ -461,7 +461,7 @@ button {
 
 .prioridades__intro .section-subtitle,
 .prioridades__text {
-  magin: 18px auto 0;
+  margin: 18px auto 0;
   max-width: 640px;
   font-size: 1.05rem;
   color: var(--color-text-muted);
@@ -514,6 +514,62 @@ button {
 .pillar__text {
   font-size: 0.94rem;
   color: var(--color-text-muted);
+}
+
+/* ============================================
+   Seção MVV
+   ============================================ */
+.MVV {
+  padding: 100px 0;
+  background: var(--color-bg-soft);
+}
+
+.mvv__intro {
+  max-width: 720px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.mvv__intro .section-subtitle,
+.prioridades__text {
+  margin: 18px auto 0;
+  max-width: 640px;
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+}
+
+.grid--mvv .mvv:nth-child(1) .mvv__icon{
+  background: rgba(96, 70, 138, 0.12);
+  color: var(--color-primary);
+}
+
+.grid--mvv .mvv:nth-child(2) .mvv__icon {
+  background: rgba(106, 109, 187, 0.12);
+  color: var(--color-secondary);
+}
+
+.grid--mvv .mvv:nth-child(3) .mvv__icon {
+  background: rgba(77, 56, 112, 0.12);
+  color: var(--color-primary-dark);
+}
+
+/*cores dos ícones de MVV padronizado*/
+.grid--mvv .mvv__icon svg{
+  color: var(--color-primary);
+}
+
+/* Ajustes finos de espaçamento interno para as quebras de linha (<br>) */
+.grid--mvv .mvv__text br {
+  margin-bottom: 6px;
+  display: block;
+  content: "";
+}
+
+/* Responsividade da Seção MVV para telas menores */
+@media (max-width: 768px) {
+  .MVV {
+    padding: 70px 0;
+  }
 }
 
 /* ============================================
@@ -571,7 +627,7 @@ button {
 
 /* ============================================
    Interatividade unificada dos cards
-   (Soluções, Equipe e Ferramentas)
+   (Soluções, Ferramentas e Equipe)
    ============================================ */
 .card,
 .member,
@@ -612,51 +668,6 @@ button {
   width: 26px;
   height: 26px;
 }
-
-/* ============================================
-   Seção MVV — Estilização Customizada
-   ============================================ */
-.MVV {
-  padding: 100px 0;
-  background: var(--color-bg-soft);
-}
-
-/* Modificadores exclusivos para os pilares de Missão, Visão e Valores */
-.grid--pilares .pillar:nth-child(1) .pillar__icon{
-  background: rgba(96, 70, 138, 0.12);
-  color: var(--color-primary);
-}
-
-.grid--pilares .pillar:nth-child(2) .pillar__icon {
-  background: rgba(106, 109, 187, 0.12);
-  color: var(--color-secondary);
-}
-
-.grid--pilares .pillar:nth-child(3) .pillar__icon {
-  background: rgba(77, 56, 112, 0.12);
-  color: var(--color-primary-dark);
-}
-
-/*cores dos ícones de MVV padronizado*/
-.grid--pilares .pillar__icon svg{
-  color: var(--color-primary);
-}
-
-/* Ajustes finos de espaçamento interno para as quebras de linha (<br>) */
-.grid--pilares .pillar__text br {
-  margin-bottom: 6px;
-  display: block;
-  content: "";
-}
-
-/* Responsividade da Seção MVV para telas menores */
-@media (max-width: 768px) {
-  .MVV {
-    padding: 70px 0;
-  }
-}
-
-
 /* ============================================
    Equipe
    ============================================ */
@@ -921,6 +932,12 @@ button {
     margin: 0 auto;
   }
 
+    .grid--mvv {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
   .contato__inner {
     grid-template-columns: 1fr;
   }
@@ -1018,7 +1035,8 @@ button {
   .card:hover,
   .member:hover,
   .tool-card:hover,
-  .pillar:hover,
+  .mvv:hover,
+  .mvv:hover,
   .mini-card:hover,
   .btn:hover {
     transform: none;
