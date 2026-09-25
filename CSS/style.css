@@ -517,7 +517,7 @@ button {
 }
 
 /* ============================================
-   Seção MVV
+   MVV
    ============================================ */
 .MVV {
   padding: 100px 0;
@@ -538,7 +538,48 @@ button {
   color: var(--color-text-muted);
 }
 
-.grid--mvv .mvv:nth-child(1) .mvv__icon{
+/* Configuração do Grid para 3 colunas (Desktop) */
+.grid--mvv {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Transformando cada bloco em um Card Branco Centralizado */
+.mvv {
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+  padding: 34px 26px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  
+  /* Centralização vertical/horizontal dos elementos internos */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  /* Transição suave para o efeito de zoom */
+  transition: all 0.3s ease;
+}
+
+/* Efeito de zoom idêntico ao das Prioridades */
+.mvv:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+}
+
+/* Estrutura do container do ícone (Círculo em volta do SVG) */
+.mvv__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: 18px;
+}
+
+/* Mantendo as cores personalizadas que você criou para cada ícone */
+.grid--mvv .mvv:nth-child(1) .mvv__icon {
   background: rgba(96, 70, 138, 0.12);
   color: var(--color-primary);
 }
@@ -553,9 +594,19 @@ button {
   color: var(--color-primary-dark);
 }
 
-/*cores dos ícones de MVV padronizado*/
-.grid--mvv .mvv__icon svg{
-  color: var(--color-primary);
+/* Forçando o tamanho correto do SVG para não ficar gigante */
+.grid--mvv .mvv__icon svg {
+  width: 26px;
+  height: 26px;  
+}
+
+/* Título interno do card (Missão, Visão, Valores) */
+.mvv__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.12rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 10px;
 }
 
 /* Ajustes finos de espaçamento interno para as quebras de linha (<br>) */
@@ -563,13 +614,6 @@ button {
   margin-bottom: 6px;
   display: block;
   content: "";
-}
-
-/* Responsividade da Seção MVV para telas menores */
-@media (max-width: 768px) {
-  .MVV {
-    padding: 70px 0;
-  }
 }
 
 /* ============================================
@@ -1035,7 +1079,6 @@ button {
   .card:hover,
   .member:hover,
   .tool-card:hover,
-  .mvv:hover,
   .mvv:hover,
   .mini-card:hover,
   .btn:hover {
