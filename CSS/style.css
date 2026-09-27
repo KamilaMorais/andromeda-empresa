@@ -59,6 +59,7 @@ a {
 
 ul, h1, h2, h3, p {
   margin: 0;
+  color:#2D2438;
 }
 
 button {
@@ -104,7 +105,7 @@ button {
 .section-subtitle {
   margin-top: 14px;
   font-size: 1.05rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   max-width: 560px;
 }
 
@@ -300,7 +301,7 @@ button {
 .hero__subtitle {
   margin-top: 22px;
   font-size: 1.1rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   max-width: 480px;
 }
 
@@ -396,7 +397,7 @@ button {
 
 .sobre__paragraph {
   margin-top: 20px;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   font-size: 1.04rem;
 }
 
@@ -464,7 +465,7 @@ button {
   margin: 18px auto 0;
   max-width: 640px;
   font-size: 1.05rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
 }
 
 .grid--pilares {
@@ -513,7 +514,7 @@ button {
 
 .pillar__text {
   font-size: 0.94rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
 }
 
 /* ============================================
@@ -535,39 +536,31 @@ button {
   margin: 18px auto 0;
   max-width: 640px;
   font-size: 1.05rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
 }
 
-/* Configuração do Grid para 3 colunas (Desktop) */
 .grid--mvv {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* Transformando cada bloco em um Card Branco Centralizado */
 .mvv {
   background: var(--color-card);
   border-radius: var(--radius-lg);
   padding: 34px 26px;
   text-align: center;
   box-shadow: var(--shadow-soft);
-  
-  /* Centralização vertical/horizontal dos elementos internos */
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  /* Transição suave para o efeito de zoom */
   transition: all 0.3s ease;
 }
 
-/* Efeito de zoom idêntico ao das Prioridades */
 .mvv:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: var(--shadow-card);
   cursor: pointer;
 }
 
-/* Estrutura do container do ícone (Círculo em volta do SVG) */
 .mvv__icon {
   display: inline-flex;
   align-items: center;
@@ -576,9 +569,9 @@ button {
   height: 56px;
   border-radius: 50%;
   margin-bottom: 18px;
+  background-color: #60468A;
 }
 
-/* Mantendo as cores personalizadas que você criou para cada ícone */
 .grid--mvv .mvv:nth-child(1) .mvv__icon {
   background: rgba(96, 70, 138, 0.12);
   color: var(--color-primary);
@@ -594,13 +587,11 @@ button {
   color: var(--color-primary-dark);
 }
 
-/* Forçando o tamanho correto do SVG para não ficar gigante */
 .grid--mvv .mvv__icon svg {
   width: 26px;
   height: 26px;  
 }
 
-/* Título interno do card (Missão, Visão, Valores) */
 .mvv__title {
   font-family: var(--font-display);
   font-weight: 600;
@@ -609,9 +600,8 @@ button {
   margin-bottom: 10px;
 }
 
-/* Ajustes finos de espaçamento interno para as quebras de linha (<br>) */
 .grid--mvv .mvv__text br {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   display: block;
   content: "";
 }
@@ -666,7 +656,7 @@ button {
 
 .card__text {
   font-size: 0.96rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
 }
 
 /* ============================================
@@ -858,6 +848,7 @@ button {
   font-size: 1.5rem;
   line-height: 1.3;
   margin-top: 4px;
+  color: var(--color-bg);
 }
 
 .contato__repo-text {
@@ -875,7 +866,7 @@ button {
 }
 
 .btn--github:hover {
-  background: var(--color-bg);
+  background: var(white);
   transform: translateY(-2px);
 }
 
