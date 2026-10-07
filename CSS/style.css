@@ -589,7 +589,8 @@ button {
 
 .grid--mvv .mvv__icon svg {
   width: 26px;
-  height: 26px;  
+  height: 26px;
+  color: var(--color-primary);
 }
 
 .mvv__title {
@@ -607,7 +608,7 @@ button {
 }
 
 /* ============================================
-   Soluções — Cards Grid
+   Soluções
    ============================================ */
 .solucoes {
   padding: 100px 0;
@@ -619,14 +620,26 @@ button {
 }
 
 .grid--solucoes {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
   background: var(--color-card);
   border-radius: var(--radius-lg);
   padding: 36px 28px;
+  box-shadow: var(--shadow-soft);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
   box-shadow: var(--shadow-card);
+  cursor: pointer;
 }
 
 .card__icon {
